@@ -8,13 +8,6 @@ const { bookRooms, getBookings, resetBookings, generateRandomOccupancy } = requi
 const app = express();
 app.use(bodyParser.json());
 app.use(cors({ origin: "*" })); 
-// app.use(
-//   cors({
-//     origin: "https://room-booking-system-tau.vercel.app",
-//     methods: "GET,POST,PUT,DELETE",
-//     allowedHeaders: "Content-Type,Authorization",
-//   })
-// );
 
 app.get("/", (req, res) => {
     res.send("Room Booking System");

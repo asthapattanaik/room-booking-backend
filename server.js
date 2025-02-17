@@ -6,8 +6,9 @@ const cors = require("cors");
 const { bookRooms, getBookings, resetBookings, generateRandomOccupancy } = require("./controller/bookingController");
 
 const app = express();
+app.use(cors()); 
 app.use(bodyParser.json());
-app.use(cors({ origin: "*" })); 
+
 
 app.get("/", (req, res) => {
     res.send("Room Booking System");

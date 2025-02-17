@@ -6,8 +6,6 @@ require("dotenv").config();
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.error("MongoDB connection error:", err));
-
-  const MAX_ROOMS_PER_FLOOR = 10;
   const LAST_FLOOR_ROOMS = 7;
 
 async function initializeRooms() {
